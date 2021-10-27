@@ -16,6 +16,7 @@ features:
           Easy to use
 
 # Members
-  Emmanuel Jordan Onera
+
+          Emmanuel Jordan Onera
   
-  Jeriah Robert Galang
+          Jeriah Robert Galang
