@@ -11,9 +11,9 @@ features:
 
           Supports a variety of shapes
           
-          User Friendly
+          User Friendly / Easy to use
           
-          Easy to use
+          
 
 # Members
 
