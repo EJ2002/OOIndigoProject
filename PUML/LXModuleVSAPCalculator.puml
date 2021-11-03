@@ -1,0 +1,48 @@
+@startuml
+
+object User {
++Start
++input values
+ }
+
+object Menu {
++Choices
+}
+
+Object Terminate{
++message
+}
+
+map "Shapes<Integer>" as Shapes {
+1 => Pyramid
+2 => Sphere
+3 => Cylinder
+4 => Cone
+5 => Rectangular Tank
+6 => Cube
+... => ........
+}
+object Formulas {
++Volume
++Surface Area
+
+}
+object Output {
++Volume
++Area
+}
+
+note left of Shapes : user  selects one
+note right of Formulas : User inputs required values
+
+User --> Menu
+Menu --> Shapes
+Formulas <-- Shapes
+Formulas --> Output
+
+Output --> Menu
+Menu --> Terminate
+
+
+
+@enduml
