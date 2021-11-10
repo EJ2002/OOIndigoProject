@@ -1,0 +1,25 @@
+@startuml
+class User
+class Menu {
++Shapes_list()
++call menu
++Terminate
+}
+class Formula{
++Volume
++Area
+}
+class Output{
++Results
+}
+class Terminate
+note left of Formula : inputs required values
+User --> Menu : "Start"
+Menu ---> Formula : "Enter Value"
+Formula ---> Output
+Output --> Menu : "Returns to the start"
+Menu --> Terminate
+
+hide circles
+hide empty members
+@enduml
