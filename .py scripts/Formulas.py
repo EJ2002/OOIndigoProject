@@ -1,87 +1,151 @@
-from Formulas import Spheres, Cylinder, Cone, SquarePyramid, Rectangulartank, Cube
+import math
+pi = math.pi
 
-def menu():
 
-    print(
-                """
-                VOLUME AND AREA CALCULATOR
-                1. Sphere
-                2. Cylinder
-                3. Cone
-                4. Square Pyramid
-                5. Rectangular Tank
-                6. Cube
-                7. Call menu
-                8. Quit
-                """
-            )
+class Spheres:
+    def __init__(self, r):
+        self.radius = r
+        self.area = 0
+        self.volume = 0
 
-try:
-    menu()
-    while True:
+    def Radius(self):
+        return self.radius
 
-        command = int(input("Enter command: "))
+    def SA(self):
+        r = self.radius
+        self.area = 4 * pi * (r**2)
+        return (self.area)
 
-        if command == 1:
+    def V(self):
+        r = self.radius
+        self.volume = (4/3) * pi * (r**3)
+        return (self.volume)
 
-            r = int(input("Enter Radius of Sphere: "))
-            s = Spheres(r)
-            print("The Surface Area of the Sphere is: ", round(s.SA(), 2))
-            print("The Volume of the Sphere is: ", round(s.V(), 2))
 
-        elif command == 2:
+class Cylinder:
+    def __init__(self, r, h):
+        self.radius = r
+        self.height = h
+        self.area = 0
+        self.volume = 0
 
-            r = int(input('Enter Radius of Cylinder: '))
-            h = int(input("Enter Height of Cylinder: "))
-            c = Cylinder(r, h)
-            print("The Surface area of the Cylinder is: ", round(c.SA(), 2))
-            print("The Volume of the Cylinder is: ", round(c.V(), 2))
+    def Radius(self):
+        return self.radius
 
-        elif command == 3:
+    def Height(self):
+        return self.height
 
-            r = int(input('Enter Base Radius of the Cone: '))
-            h = int(input('Enter the Height of the Cone: '))
-            c = Cone(r, h)
-            print("The Surface area of the Cone is: ", round(c.SA(), 2))
-            print("The Volume of the Cone is: ", round(c.V(), 2))
+    def SA(self):
+        r = self.radius
+        h = self.height
+        self.area = 2 * pi * r * h + 2 * pi * (r**2)
+        return (self.area)
 
-        elif command == 4:
+    def V(self):
+        r = self.radius
+        h = self.height
+        self.volume = pi * (r**2) * h
+        return (self.volume)
 
-            a = int(input('Enter Base Edge of the Square Pyramid: '))
-            h = int(input('Enter the Height of the Square Pyramid: '))
-            Sp = SquarePyramid(a, h)
-            print("The Surface area of the Square Pyramid is: ", round(Sp.SA(), 2))
-            print("The Volume of the Square Pyramid is: ", round(Sp.V(), 2))
 
-        elif command == 5:
+class Cone:
+    def __init__(self, r, h):
+        self.radius = r
+        self.height = h
+        self.area = 0
+        self.volume = 0
 
-            l = int(input('Enter length of the Rectangular Tank: '))
-            w = int(input('Enter width of the Rectangular Tank: '))
-            h = int(input('Enter Height of the Rectangular Tank: '))
-            Rt = Rectangulartank(w, h, l)
-            print("The Surface area of the Rectangular Tank is: ", round(Rt.SA(), 2))
-            print("The Volume of the Rectangular Tank is: ", round(Rt.V(), 2))
+    def Radius(self):
+        return self.radius
 
-        elif command == 6:
+    def Height(self):
+        return self.height
 
-            a = int(input('Enter Edge Length of Cube: '))
-            c = Cube(a)
-            print("The Surface area of the Cube is: ", round(c.SA(), 2))
-            print("The Volume of the Cube is: ", round(c.V(), 2))
+    def SA(self):
+        r = self.radius
+        h = self.height
+        self.area =  pi * r * ( r + math.sqrt(h**2 + r**2))
+        return (self.area)
 
-        elif command == 7:
+    def V(self):
+        r = self.radius
+        h = self.height
+        self.volume = pi * (r**2) * (h / 3)
+        return (self.volume)
 
-            menu()
 
-        elif command == 8:
+class SquarePyramid:
+    def __init__(self, a, h):
+        self.base = a
+        self.height = h
+        self.area = 0
+        self.volume = 0
 
-            print("Thank you for using the program.")
-            break
+    def Base(self):
+        return self.base
 
-        else:
+    def Height(self):
+        return self.height
 
-            print("Please enter a valid command.")
+    def SA(self):
+        a = self.base
+        h = self.height
+        self.area =  a**2 + (2*a) * math.sqrt((a**2/4) + h**2)
+        return (self.area)
 
-except ValueError:
+    def V(self):
+        a = self.base
+        h = self.height
+        self.volume = a**2 * ( h / 3)
+        return (self.volume)
 
-    print("You have entered a non-numeral value.")
+class Rectangulartank:
+    def __init__(self, w, h, l):
+        self.width = w
+        self.height = h
+        self.length = l
+        self.area = 0
+        self.volume = 0
+
+    def Width(self):
+        return self.width
+
+    def Height(self):
+        return self.height
+
+    def Length(self):
+        return self.length
+
+    def SA(self):
+        w = self.width
+        h = self.height
+        l = self.length
+        self.area = (2 * l * w) + (2 * l * h) + (2 * w * h)
+        return (self.area)
+
+    def V(self):
+        w = self.width
+        h = self.height
+        l = self.length
+        self.volume = w * h * l
+        return (self.volume)
+
+
+class Cube:
+    def __init__(self, a):
+        self.base = a
+        self.area = 0
+        self.volume = 0
+
+    def Base(self):
+        return self.base
+
+    def SA(self):
+        a = self.base
+        self.area = 6 * a**2
+        return (self.area)
+
+    def V(self):
+        a = self.base
+        self.volume = a**3
+        return (self.volume)
