@@ -13,47 +13,6 @@ package Shapes {
 "Cone" as (Shape4)
 "Rectangular Tank" as (Shape5)
 "Cube" as (Shape6)
-}
-note right of Shapes : User selects one of the shapes present
-
-Usecase Value as " Input value:
-Values needed changes depending on the
- shape selected"
-note left of Value : user inputs the required values
-
-"Call Menu" as (Commands)
-"End program" as (Terminate)
-
-"Output" as (Result)
-note left of (Result) : Displays the Volume, Area
-
-:User: --> (Start)
-
-
-(Start) <--> (Commands)
-(Start) --> (Terminate)
-
-(Start) --> Shapes
-Shapes --> Value
-Value --> (Result)
-(Result) --> (Start)
-
-@enduml
-@startuml
-'https://plantuml.com/sequence-diagram
-skinparam actorStyle awesome
-
-usecase Start as " Start Application:
- Shows the menu bar / list of shapes/
-   commands."
-
-package Shapes {
-"Pyramid" as (Shape1)
-"Sphere" as (Shape2)
-"Cylinder" as (Shape3)
-"Cone" as (Shape4)
-"Rectangular Tank" as (Shape5)
-"Cube" as (Shape6)
 "Other Shapes...." as (Shape7)
 }
 note right of Shapes : User selects one of the shapes present
@@ -70,11 +29,7 @@ note left of Value : user inputs the required values
 note left of (Result) : Displays the Volume, Area
 
 :User: --> (Start)
-
-
-
 (Start) --> (Terminate)
-
 (Start) --> Shapes
 Shapes --> Value
 Value --> (Result)
