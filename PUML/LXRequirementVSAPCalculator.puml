@@ -4,10 +4,15 @@ class Menu {
 +Shapes_list()
 +call menu
 +Terminate
+
 }
 class Formula{
 +Volume
 +Area
++Radius(self)
++SA(self)
++Volume(self)
++Height(self)
 }
 class Output{
 +Results
