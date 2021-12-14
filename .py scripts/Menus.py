@@ -1,5 +1,5 @@
-
-def menu1(): #SHAPES CATEGORIES
+def menu1():
+    # SHAPES CATEGORIES
 
     print(
                 """
@@ -13,7 +13,9 @@ def menu1(): #SHAPES CATEGORIES
                 """
             )
 
-def menu2(): #NO SIDES MENU
+
+def menu2():
+    # NO SIDES MENU
     print(
         """
         SHAPES WITH NO SIDES
@@ -24,7 +26,9 @@ def menu2(): #NO SIDES MENU
         """
     )
 
-def menu3(): #WITH SIDES MENU
+
+def menu3():
+    # WITH SIDES MENU
     print(
         """
         SHAPES WITH NO SIDES
@@ -35,6 +39,7 @@ def menu3(): #WITH SIDES MENU
         5. Back to Shapes Categories
         """
     )
+
 
 def menu4():
     print(
