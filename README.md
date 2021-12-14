@@ -9,7 +9,9 @@ features:
 
           Supports large numbers
 
-          Supports a common shapes
+          Supports common 3D - shapes use in math problems
+          
+          Shapes are separated by their characteristics
           
           User Friendly / Easy to use
           
