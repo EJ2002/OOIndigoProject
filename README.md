@@ -9,11 +9,17 @@ features:
 
           Supports large numbers
 
-          Supports a variety of shapes
+          Supports a common shapes
           
           User Friendly / Easy to use
           
+# Shapes supported
+
+          Sphere                Ellipsoid                 Torus
           
+          Square Pyramid        Rectangular tank          Cube
+          
+          Triangular Prism      Cylinder                  Cone    
 
 # Members
 
