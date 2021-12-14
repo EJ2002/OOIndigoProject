@@ -3,7 +3,7 @@ team Indigo
 project: Volume, Surface Area Calculator
                   (VSAP Calculator)
 
-description: This system is designed to help people find the volume and surface area of " COMMON SHAPES " with just a few clicks.
+description: This system is designed to help people find the volume and surface area of " COMMON 3D - SHAPES " with just a few clicks.
 
 features: 
 
