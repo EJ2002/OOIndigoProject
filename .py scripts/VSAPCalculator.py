@@ -44,6 +44,7 @@ try:
                 print("The volume of the Square Pyramid is: ", round(Sp.v(), 2))
 
             if Withsides == 2:
+                # a was set to zero since it is part of the parent class but not needed by the rectangular tank
                 l = int(input('Enter length of the Rectangular Tank: '))
                 w = int(input('Enter width of the Rectangular Tank: '))
                 h = int(input('Enter Height of the Rectangular Tank: '))
@@ -53,6 +54,7 @@ try:
                 print("The volume of the Rectangular Tank is: ", round(Rt.v(), 2))
 
             if Withsides == 3:
+                # h was set to zero since it is part of the parent class but not needed by the cube
                 a = int(input('Enter Edge Length of Cube: '))
                 h = 0
                 c = Cube(a, h)
@@ -92,9 +94,11 @@ try:
                 menu1()
 
         if command == 4:
+            # print the main menu
             menu1()
 
         if command == 5:
+            # Terminates the program
             print("Thank you for using the program.")
             break
 
