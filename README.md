@@ -39,7 +39,7 @@ features:
           
 # Demonstration
         
-          link: https://www.youtube.com/watch?v=tmEtsJeoRsk
+          https://www.youtube.com/watch?v=tmEtsJeoRsk
         
         
   `       
